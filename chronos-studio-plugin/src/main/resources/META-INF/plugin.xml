@@ -1,0 +1,60 @@
+<idea-plugin>
+    <id>com.chronos.studio</id>
+    <name>Chronos Debugger</name>
+    <version>0.1.0</version>
+    <vendor email="support@chronos.dev" url="https://chronos.dev">Chronos</vendor>
+
+    <description><![CDATA[
+    <h2>Trust-First State Debugging for Android</h2>
+    <p>Record, inspect, and replay application state with guaranteed determinism.</p>
+    
+    <h3>Features</h3>
+    <ul>
+        <li><b>Timeline Scrubber</b> - Navigate through recorded state history</li>
+        <li><b>State Tree Viewer</b> - Inspect object hierarchies with diff support</li>
+        <li><b>Temporal Analysis</b> - Visualize event relationships (correlation, not causation)</li>
+        <li><b>Determinism Scoring</b> - Know when replay is safe</li>
+    </ul>
+    
+    <h3>Safety Guarantees</h3>
+    <ul>
+        <li>Never runs in production builds</li>
+        <li>Refuses replay when determinism can't be guaranteed</li>
+        <li>Explains all refusals with mitigations</li>
+    </ul>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.android</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Chronos Debugger"
+                    anchor="bottom"
+                    icon="/icons/chronos.svg"
+                    factoryClass="com.chronos.studio.ChronosToolWindowFactory"/>
+    </extensions>
+
+    <actions>
+        <group id="ChronosActions" text="Chronos" description="Chronos Debugger Actions">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            
+            <action id="Chronos.StartRecording"
+                    class="com.chronos.studio.actions.StartRecordingAction"
+                    text="Start Recording"
+                    description="Start recording state snapshots"
+                    icon="/icons/record.svg"/>
+            
+            <action id="Chronos.StopRecording"
+                    class="com.chronos.studio.actions.StopRecordingAction"
+                    text="Stop Recording"
+                    description="Stop recording state snapshots"
+                    icon="/icons/stop.svg"/>
+            
+            <action id="Chronos.StartReplay"
+                    class="com.chronos.studio.actions.StartReplayAction"
+                    text="Start Replay"
+                    description="Start replaying recorded session"
+                    icon="/icons/replay.svg"/>
+        </group>
+    </actions>
+</idea-plugin>

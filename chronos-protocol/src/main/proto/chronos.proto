@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package chronos.protocol;
+
+option java_package = "com.chronos.protocol";
+option java_outer_classname = "ChronosProto";
+
+// The master envelope for all timeline data
+message TimelineEvent {
+  int64 timestamp = 1;         // System.currentTimeMillis()
+  int64 sequence_number = 2;   // Monotonic counter
+  string thread_name = 3;
+  
+  oneof payload {
+    StateSnapshot snapshot = 10;
+    LogEvent log_event = 11;
+  }
+}
+
+message StateSnapshot {
+  string source_id = 1;        // Unique ID of the state source
+  bytes value = 2;             // Serialized state value
+  string value_type = 3;       // Fully qualified class name
+}
+
+message LogEvent {
+  string level = 1;
+  string message = 2;
+  string tag = 3;
+}
