@@ -285,3 +285,4 @@
 2026-01-02 09:42:00 - chore: Bump dependencies for Gradle
 2026-01-02 19:10:00 - test: Fix flaky test for Gradle
 2026-01-02 22:11:00 - refactor: optimize imports for Gradle
+2026-01-02 22:40:00 - feat: Enhance error reporting for Gradle
