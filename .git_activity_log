@@ -298,3 +298,4 @@
 2026-01-05 14:27:00 - docs: Update kdoc for Protocol
 2026-01-05 17:51:00 - feat: Add defensive copy for Protocol
 2026-01-05 20:46:00 - perf: Improve allocation rate for Protocol
+2026-01-05 11:23:00 - refactor: optimize imports for Protocol
