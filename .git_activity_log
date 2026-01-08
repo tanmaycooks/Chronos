@@ -334,3 +334,4 @@
 2026-01-08 19:56:00 - style: Format code for RingBuffer
 2026-01-08 12:44:00 - chore: Validating build config for RingBuffer
 2026-01-08 16:24:00 - test: Fix flaky test for RingBuffer
+2026-01-08 11:29:00 - docs: Update kdoc for RingBuffer
