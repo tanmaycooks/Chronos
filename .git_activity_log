@@ -464,3 +464,4 @@
 2026-01-23 18:56:00 - style: Format code for Replay
 2026-01-23 11:12:00 - refactor: optimize imports for Replay
 2026-01-23 13:36:00 - feat: Add defensive copy for Replay
+2026-01-23 14:53:00 - refactor: Extract utility function for Replay
