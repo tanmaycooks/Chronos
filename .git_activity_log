@@ -460,3 +460,4 @@
 2026-01-22 16:51:00 - docs: Update kdoc for Encryption
 2026-01-22 19:43:00 - feat: Implement core logic for Encryption
 2026-01-23 10:32:00 - feat(Replay): Implementation checkpoint
+2026-01-23 19:45:00 - fix: Thread safety issue for Replay
