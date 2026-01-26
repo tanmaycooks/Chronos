@@ -475,3 +475,4 @@
 2026-01-24 18:12:00 - refactor: Extract utility function for Cleanup
 2026-01-26 13:54:00 - feat(MultiProc): Implementation checkpoint
 2026-01-26 09:57:00 - chore: Bump dependencies for MultiProc
+2026-01-26 14:29:00 - feat: Enhance error reporting for MultiProc
